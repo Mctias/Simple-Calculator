@@ -7,7 +7,6 @@ function numberClick(value)
 {
     let screenResult = document.getElementById('result').innerHTML;
 
-
     //Removes the 0 that is displayed initially
     if(screenResult == '0' || firstNumber)
         document.getElementById('result').innerHTML='';
@@ -54,8 +53,6 @@ function equalsClick()
     let result;
     let currentNumber = document.getElementById('result').innerHTML;
 
-    console.log(savedNumber + ' ' + currentNumber)
-
     if(state == 'add')
         result = parseFloat(savedNumber) + parseFloat(currentNumber);
     else if(state == 'sub')
@@ -68,8 +65,6 @@ function equalsClick()
         result = Math.sqrt(parseFloat(currentNumber));
     else if(state == 'percent')
         result = parseFloat(savedNumber) / 100;
-    
-    
     
     else if(state == 'justCalced' || state == 'calculating')
         return;
@@ -84,6 +79,7 @@ function equalsClick()
     state = 'justCalced';
 }
 
+//Resets the calculator
 function reset()
 {
     state = 'calculating';
@@ -91,9 +87,3 @@ function reset()
 
     document.getElementById('result').innerHTML = 0;
 }
-
-function toFixedIfNecessary( value, dp )
-{
-    return +parseFloat(value).toFixed( dp );
-}
-  
