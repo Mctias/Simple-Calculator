@@ -12,7 +12,7 @@ function numberClick(value)
         document.getElementById('result').innerHTML='';
     
     //So that we don't go outside of the div
-    if(!firstNumber && screenResult.toString().length >= 8)
+    if(!firstNumber && screenResult.toString().length >= 7)
         return;
     
     firstNumber = false;
@@ -43,6 +43,10 @@ function operandClick(operation)
     //The next number will be the first in the sequence
     firstNumber = true;
 
+    if(savedNumber.toString().length > 7)
+    {
+        savedNumber = savedNumber.toExponential(3);
+    }
     document.getElementById('result').innerHTML = savedNumber;
 
 }
@@ -69,7 +73,7 @@ function equalsClick()
     else if(state == 'justCalced' || state == 'calculating')
         return;
 
-    if(result.toString().length >= 8)
+    if(result.toString().length >= 7)
     {
         result = result.toExponential(3);
     }
