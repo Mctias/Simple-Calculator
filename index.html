@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="app.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap" rel="stylesheet">
+     
+    </head>
+<body>
+    <div class='calculator'>
+        <div id='screen'><p id='result'>0</p></div>
+        <div class='button-panel'>
+            <button id='reset-button' onclick='reset()'>C</button>
+            <button onclick='operandClick(this.value)' value='add'>+</button>
+            <button onclick='operandClick(this.value)' value='sub'>-</button>
+            <button onclick='operandClick(this.value)' value='times'>x</button>
+            <br>
+            <button onclick='numberClick(this.value)' value='7'>7</button>
+            <button onclick='numberClick(this.value)' value='8'>8</button>
+            <button onclick='numberClick(this.value)' value='9' >9</button>
+            <button onclick='operandClick(this.value)' value='div'>/</button>
+            <br>
+            <button onclick='numberClick(this.value)' value='4'>4</button>
+            <button onclick='numberClick(this.value)' value='5'>5</button>
+            <button onclick='numberClick(this.value)' value='6'>6</button>
+            <button onclick='operandClick(this.value)' value='percent'>%</button>
+            <br>
+            <button  onclick='numberClick(this.value)' value='1'>1</button>
+            <button  onclick='numberClick(this.value)' value='2'>2</button>
+            <button  onclick='numberClick(this.value)' value='3'>3</button>
+            <button  onclick='operandClick(this.value)' value='sqrt'>√</button>
+            <br>
+            <button onclick='numberClick(this.value)' value='0'>0</button>
+            <button onclick='numberClick(this.value)' value='.'>.</button>
+            <button id='equals-button' onclick='equalsClick()'>=</button>
+        </div>
+
+
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
