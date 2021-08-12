@@ -9,17 +9,19 @@ body{
 .calculator{
     background-color: #181A18 ;
     position: absolute;
-    height: 65vh;
+    min-height: 610px;
+    max-height: 610px;
     min-width: 350px;
-    left: 39vw;
+    left: 40%;
     top: 10vw;
     border-radius: 30px;
 }
 
 #screen{
     background-color: grey;
-    height: 20%;
+    min-height: 110px;
     min-width: 350px;
+    max-height: 100px;
     margin: 11px;
     margin-top: 30px;
     position: relative;
